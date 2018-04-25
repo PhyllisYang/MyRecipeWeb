@@ -7,6 +7,7 @@ Created on Sat Apr 21 16:58:04 2018
 """
 
 from icrawler.builtin import GoogleImageCrawler
+import csv
 
 file='/Users/fanyang/python/finalproject/recipe_data.csv' '''change to recipe_data's dir'''
 column_name = 'title'
