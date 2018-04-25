@@ -9,8 +9,7 @@ Created on Sat Apr 21 16:58:04 2018
 from icrawler.builtin import GoogleImageCrawler
 import csv
 
-file='/Users/fanyang/python/finalproject/recipe_data.csv' '''change to recipe_data's dir'''
-column_name = 'title'
+
 
 
 
@@ -45,13 +44,17 @@ filters = dict(
     color='orange',
     license='commercial,modify',
     date=((2017, 1, 1), (2017, 11, 30)))'''
-
-search_list=get_origin_column_value(file,column_name)
-
-'''google_crawler.crawl(keyword='cat', max_num=1)'''
-i=0
-
-for key in search_list:
-    craw_image(key,i)
-    i += 1
-
+def main():
+    file='/Users/fanyang/python/finalproject/recipe_data.csv' #change to recipe_data's dir
+    column_name = 'title'
+    search_list=get_origin_column_value(file,column_name)
+    
+    #google_crawler.crawl(keyword='cat', max_num=1)
+    i=0
+    
+    for key in search_list:
+        craw_image(key,i)
+        i += 1
+        
+if __name__ == '__main__':
+    main()
